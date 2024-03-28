@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <script>
+      function anmeldung() {
+        window.location.href="/intern.html";
+        var benutzernameAnmeldung = document.getElementById('benutzername').value;
+        var passwortAnmeldung = document.getElementById('passwort').value;
+
+        if(benutzernameAnmeldung == "admin" && passwortAnmeldung == "123") {
+          console.log("Erfolgreiche Anmeldung!")
+          window.location.href="intern.html";
+        } else {
+          alert("Ungültiger Benutzername oder Passwort.")
+        }
+      }
+    </script> 
+
+    <title>Form</title>
+  </head>
+  <body>
+    <section class="_form_05">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="_form-05-box">
+              <div class="row">
+                <div class="col-sm-12 _nb-pl">
+                  <div class="_mn_df">
+                    <div class="main-head">
+                      <h2>Anmeldung Intranet</h2>
+                    </div>
+
+                    <div class="form-group">
+                      <input name="benutzername" id="benutzername" class="form-control" type="text" placeholder="Benutzername" required="" aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                      <input type="password" name="passwort" id="passwort" class="form-control" type="text" placeholder="Password" required="" aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                      <div class="_btn_04" onclick="anmeldung()">
+                        <a href="#">Anmelden</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
